@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@axa/web-toolkit@^2.0.0-alpha.1":
+  version "2.0.0-alpha.1"
+  resolved "https://axags.artifactoryonline.com/axags/api/npm/virtual-libcontento/@axa/web-toolkit/-/web-toolkit-2.0.0-alpha.1.tgz#72f43f8e84b69002266a2a10edffe91fe1b1d917"
+  dependencies:
+    tether "^1.4.0"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://axags.artifactoryonline.com/axags/api/npm/virtual-libcontento/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -4283,6 +4289,10 @@ tar@^2.0.0, tar@~2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+tether@^1.4.0:
+  version "1.4.0"
+  resolved "https://axags.artifactoryonline.com/axags/api/npm/virtual-libcontento/tether/-/tether-1.4.0.tgz#0f9fa171f75bf58485d8149e94799d7ae74d1c1a"
 
 text-table@~0.2.0:
   version "0.2.0"

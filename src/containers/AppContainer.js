@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react';
-
-const Header = () => <div>Header</div>;
-
-const Footer = () => <div>Footer</div>;
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 const App = ({children}) =>
   <div>

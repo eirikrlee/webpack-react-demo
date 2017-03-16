@@ -1,6 +1,8 @@
 - reactIntl
+- axatoolkit
 - redux logger middleware
-- redux dev tools
+- redux dev tools - DONE 
+  - configure for node_env  https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
 - static folder
 - webpack postCSS, etc
 - immutable
