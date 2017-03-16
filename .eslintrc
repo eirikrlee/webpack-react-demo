@@ -1,0 +1,37 @@
+{
+  "extends": ["axa","plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins":[ 'react', 'jsx-a11y' ],
+  "env": {
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "0.14" // React version, default to the latest React stable release
+    }
+  },
+
+  "rules": {
+    // Soft some rules.
+    "no-extra-parens": 0,
+    "consistent-return": 0,
+    "global-require": 0, // Used by the project.
+    "max-len": 0, // It's difficult for JSX.
+    "new-cap": [2, {"capIsNew": false, "newIsCap": true}], // For Record() etc.
+    "no-underscore-dangle": 0, // Not ideal when dealing with MongoDB _id.
+    "no-class-assign": 0, // Class assign is used for higher order components.
+    "no-nested-ternary": 0, // It's nice for JSX.
+    "no-param-reassign": 0, // Param reassignment is OK. Naming is hard.
+    "no-shadow": 0, // Shadowing is a nice language feature. Naming is hard.
+    "no-confusing-arrow": 0, // This rule is useless.
+    "arrow-parens": 0, // This rule is useless.
+  }
+}

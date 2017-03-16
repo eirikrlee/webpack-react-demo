@@ -1,6 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
 
+/*
+** to do
+** sourcemaps
+
+*/
+
 const config = {
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
@@ -20,18 +26,18 @@ const config = {
         //   ]
         // }
       }]
-    }, 
+    },
     {
       test: /\.scss$/,
       use: [
-      'style-loader',
-      { 
-        loader: 'css-loader',
-        options: { 
-          modules: true
-        }
-      },
-      'sass-loader'
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        },
+        'sass-loader'
       ]
     },
     {
@@ -41,9 +47,8 @@ const config = {
         options: { limit: 10000 } // Convert images < 10k to base64 strings
       }]
     }
-    
-  ]}
-}
+    ]}
+};
 
 module.exports = config;
 

@@ -6,7 +6,7 @@ export default class App extends React.Component {
   render() {
     return (
      <div style={{textAlign: 'center'}} className={style.test}>
-        <h1>Hello React App!</h1>
+        <h1>Hello React App!!!d</h1>
         <img src={icon} />
       </div>);
   }

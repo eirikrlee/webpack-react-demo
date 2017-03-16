@@ -1,0 +1,8 @@
+node_modules/
+lib/
+target/
+src/
+.tmp/
+.git/
+project/
+coverage/
