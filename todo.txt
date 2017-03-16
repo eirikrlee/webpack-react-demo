@@ -1,0 +1,3 @@
+- reactIntl
+- redux logger middleware
+- redux dev tools

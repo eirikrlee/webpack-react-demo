@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import lifeReducer from './lifeReducer';
+import lifeReducer from './modules/life';
 
 const makeRootReducer = () => {
   return combineReducers({

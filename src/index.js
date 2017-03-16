@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link } from 'react-router';
-//import App from './components/App';
+//import { Router, Route, Link } from 'react-router';
 import routes from './routes';
-import createStore from './store/createStore'
+import createStore from './redux/createStore';
 import RootContainer from './containers/RootContainer';
 
 
