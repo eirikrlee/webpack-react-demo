@@ -1,28 +1,21 @@
-import React, { Component, PropTypes } from 'react';
-import { browserHistory, Router } from 'react-router';
-import { Provider } from 'react-redux';
+import React, { PropTypes } from 'react';
 
-class AppContainer extends Component {
-  static propTypes = {
-    routes : PropTypes.object.isRequired,
-    store  : PropTypes.object.isRequired
-  }
+const Header = () => <div>Header</div>;
 
-  shouldComponentUpdate() {
-    return false;
-  }
+const Footer = () => <div>Footer</div>;
 
-  render() {
-    const { routes, store } = this.props;
+const App = ({children}) =>
+  <div>
+    <Header />
+    {children}
+    <Footer />
+  </div>;
 
-    return (
-      <Provider store={store}>
-        <div style={{ height: '100%' }}>
-fdsff sdffsdf
-        </div>
-      </Provider>
-    );
-  }
-}
+App.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
-export default AppContainer;
+export default App;
+
+
+

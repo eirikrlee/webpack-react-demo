@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './components/App';
-import createStore from './store/createStore'
-import AppContainer from './containers/AppContainer';
 import { Router, Route, Link } from 'react-router';
+//import App from './components/App';
+import routes from './routes';
+import createStore from './store/createStore'
+import RootContainer from './containers/RootContainer';
+
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
-const store = createStore;
+const initialState = window.___INITIAL_STATE__;
+const store = createStore(initialState);
 
-console.log('334');
 
 let render = () => {
   //const routes = require('./routes/index').default(store)
-
   ReactDOM.render(
-    <AppContainer store={store} />,
+    <RootContainer store={store} routes={routes} />,
      document.getElementById('root')
   );
 };

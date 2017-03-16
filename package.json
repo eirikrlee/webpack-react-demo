@@ -19,7 +19,7 @@
     "webpack-dev-server": "^2.2.0-rc.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline",
+    "start": "webpack-dev-server -d --history-api-fallback --inline",
     "build": "webpack -p"
   },
   "dependencies": {

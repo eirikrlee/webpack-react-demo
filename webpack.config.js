@@ -12,6 +12,7 @@ const config = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/',  /* TODO: why this is needed for webpack dev server to server dist from memory */
     filename: 'bundle.js'
   },
   module: {
@@ -46,8 +47,9 @@ const config = {
         loader: 'url-loader',
         options: { limit: 10000 } // Convert images < 10k to base64 strings
       }]
-    }
-    ]}
+    }]
+  },
+  devtool: 'source-map'
 };
 
 module.exports = config;

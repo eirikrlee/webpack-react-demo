@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import lifeReducer from './lifeReducer';
 
-export const makeRootReducer = () => {
+const makeRootReducer = () => {
   return combineReducers({
     life: lifeReducer,
   });
 };
+
+export default makeRootReducer;
