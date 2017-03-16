@@ -8,9 +8,6 @@ class LifeContainer extends Component {
   static propTypes = {
     load : PropTypes.func.isRequired,
   }
-  componentDidMount() {
-
-  }
   render() {
     return (
       <div>

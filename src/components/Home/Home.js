@@ -1,9 +1,11 @@
 import React from 'react';
-import style from './style.scss';
-import icon from '../images/code.png';
+import style from './home.scss';
+import icon from '../../static/code.png';
+
+
 import { Link } from 'react-router';
 
-export default class App extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
      <div style={{textAlign: 'center'}} className={style.test}>
