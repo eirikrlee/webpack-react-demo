@@ -6,19 +6,21 @@ import makeRootReducer from './reducer';
 
 export default (initialState = {}) => {
 
-  const middleware = [thunk];
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+  const middleware = [thunk];
   const enhancers = [];
 
-  let composeEnhancers = compose;
+  const enhancer = composeEnhancers(
+    applyMiddleware(...middleware),
+    // other store enhancers if any
+    ...enhancers
+  );
 
   const store = createStore(
     makeRootReducer(),
     initialState,
-    composeEnhancers(
-      applyMiddleware(...middleware),
-      ...enhancers
-    )
+    enhancer
   );
 
   return store;

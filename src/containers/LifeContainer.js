@@ -11,7 +11,7 @@ class LifeContainer extends Component {
   render() {
     return (
       <div>
-        <h1>Life stuff</h1>
+        <h1>Life stuff - {this.props.text}</h1>
         <button onClick={this.props.load} >dispatch action</button>
       </div>
     );
@@ -19,7 +19,9 @@ class LifeContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  return { foo: state.life.foo};
+  return { 
+    text: state.life.text
+  };
 }
 
 function mapDispatchToProps(dispatch) {

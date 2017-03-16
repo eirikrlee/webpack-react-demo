@@ -10,7 +10,7 @@ const UPDATE = 'app/life/UPDATE';
 const REMOVE = 'app/life/REMOVE';
 
 const initialState = {
-  foo: 'bar',
+  text: 'foo',
   test: [],
 };
 
@@ -20,24 +20,22 @@ export default function reducer(state = initialState, action = {}) {
     // do reducer stuff
     case LOAD:
       console.log('load action');
-      return state;
+      return { ...state, ...action.payload};
     default: return state;
   }
 }
 
 // Action Creators
 export function load() {
-  return { type: LOAD };
+  return { 
+    type: LOAD, 
+    payload: {
+      text: 'bar'
+    },
+  };
 }
 
 export function create(widget) {
   return { type: CREATE, widget };
 }
 
-export function update(widget) {
-  return { type: UPDATE, widget };
-}
-
-export function remove(widget) {
-  return { type: REMOVE, widget };
-}
