@@ -10,6 +10,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.3",
@@ -20,7 +21,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server -d --history-api-fallback --inline",
-    "build": "webpack -p"
+    "clean:dist": "rm -rf dist",
+    "build": "npm run clean:dist && webpack -p"
   },
   "dependencies": {
     "@axa/web-toolkit": "^2.0.0-alpha.1",

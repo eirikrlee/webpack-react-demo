@@ -3,6 +3,7 @@
 - redux logger middleware
 - redux dev tools - DONE 
   - configure for node_env  https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
+- postCSS
 - static folder
 - webpack postCSS, etc
 - immutable
