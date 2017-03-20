@@ -7,14 +7,11 @@ const extractCSS = new ExtractTextPlugin({
   allChunks: true
 });
 
-/*
-** to do
-** sourcemaps
-*/
+// TODO: sourcemaps
 
 const config = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index',
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',  /* TODO: why this is needed for webpack dev server to server dist from memory */

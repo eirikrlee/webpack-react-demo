@@ -8,6 +8,7 @@ class LifeContainer extends Component {
   static propTypes = {
     fetchUsers : PropTypes.func.isRequired,
     isLoading: PropTypes.bool.isRequired,
+    users: PropTypes.array.isRequired,
   }
   render() {
 
