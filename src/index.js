@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import { Router, Route, Link } from 'react-router';
+
+import { IntlProvider, addLocaleData } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+import zh from 'react-intl/locale-data/zh';
+
+
 import routes from './routes';
 import createStore from './redux/createStore';
 import RootContainer from './containers/RootContainer';
 
-import axatoolkit from '@axa/web-toolkit/dist/bundles/all.css'
+require('@axa/web-toolkit/dist/bundles/all.css');
 //https://alejandronapoles.com/2016/05/10/react-and-css-modules/
 
 const initialState = window.___INITIAL_STATE__;

@@ -6,21 +6,28 @@ import * as lifeActions from '../redux/modules/life';
 class LifeContainer extends Component {
 
   static propTypes = {
-    load : PropTypes.func.isRequired,
+    fetchUsers : PropTypes.func.isRequired,
+    isLoading: PropTypes.bool.isRequired,
   }
   render() {
+
+    const { isLoading, users } = this.props;
+
     return (
       <div>
-        <h1>Life stuff - {this.props.text}</h1>
-        <button onClick={this.props.load} >dispatch action</button>
+        <h3>Life Users</h3>
+        {isLoading && <div>loading...</div>}
+        {users.map((user) => <div key={user.id}>{user.login}</div>)}
+        <button className="button" onClick={this.props.fetchUsers} >dispatch action - fetchUsers </button>
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return { 
-    text: state.life.text
+  return {
+    users: state.life.users,
+    isLoading: state.life.isLoading,
   };
 }
 

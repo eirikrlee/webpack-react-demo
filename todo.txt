@@ -10,3 +10,5 @@
 - tests
 - https://github.com/reactjs/reselect
 - https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+
+- tag commander
