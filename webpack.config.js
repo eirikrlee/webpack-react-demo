@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+//const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -46,14 +46,11 @@ const config = {
     },
     {
       test: /\.css$/,
-      //include: /node_modules/,
       include: [
         /node_modules/,
       ],
-
       loader: extractCSS.extract(['css-loader'])
     },
-
     {
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
       use: [{
