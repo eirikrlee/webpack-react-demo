@@ -27,8 +27,7 @@
     "watch": "webpack --progress --colors --watch",
     "clean:dist": "rm -rf dist",
     "build": "npm run clean:dist && webpack -p",
-    "start:server": "nodemon src/server/server.bable.js",
-    "server-watch": "node_modules/.bin/nodemon --watch src/server/ src/server/app.js"
+    "start:server": "nodemon server/server.bable.js"
   },
   "dependencies": {
     "@axa/web-toolkit": "^2.0.0-alpha.1",

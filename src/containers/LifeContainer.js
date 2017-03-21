@@ -13,7 +13,7 @@ class LifeContainer extends Component {
   render() {
 
     const { isLoading, users } = this.props;
-
+    console.log('life');
     return (
       <div>
         <h3>Life Users</h3>

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './home.scss';
-import icon from '../../static/code.png';
+import icon from '../../assets/code.png';
 
 import { Link } from 'react-router';
 

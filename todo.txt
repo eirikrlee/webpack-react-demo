@@ -1,6 +1,5 @@
-- set up nodemon with webpack watch togethr
-   - webpack middleware
 
+- webpack dev middleware
 - reactIntl
 - axatoolkit
 - redux logger middleware
