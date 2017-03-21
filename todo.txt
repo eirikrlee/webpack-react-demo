@@ -1,14 +1,18 @@
+- set up nodemon with webpack watch togethr
+   - webpack middleware
+
 - reactIntl
 - axatoolkit
 - redux logger middleware
-- redux dev tools - DONE 
+- redux dev tools - DONE
   - configure for node_env  https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
 - postCSS
+- react router redux
 - static folder
-- webpack postCSS, etc
 - immutable
 - tests
 - https://github.com/reactjs/reselect
 - https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 - react css modules
 - tag commander
+- add filename hash
