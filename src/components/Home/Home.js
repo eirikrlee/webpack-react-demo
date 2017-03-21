@@ -7,15 +7,14 @@ import { Link } from 'react-router';
 export default class Home extends React.Component {
   render() {
     return (
-     <div style={{textAlign: 'center'}} className={style.test}>
+     <div style={{textAlign: 'center'}} className={style.header}>
         <h2>this is a react redux app</h2>
-        <div >
+        <div>
           <img src={icon} />
           <Link to="/life">Life</Link>
           <br /> <br />
           {this.props.children}
         </div>
-
       </div>);
   }
 }

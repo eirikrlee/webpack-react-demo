@@ -22,12 +22,15 @@
     "webpack-dev-server": "^2.2.0-rc.0"
   },
   "scripts": {
-    "start": "concurrently \"webpack --progress --colors --watch\" \"npm run start:server\"  ",
+    "start" : "npm run build:all && node ./server/server.bundle.js",
+    "dev": "concurrently \"npm run watch\" \"npm run start:server\"",
     "webpack:dev": "webpack-dev-server -d --history-api-fallback --inline",
     "watch": "webpack --progress --colors --watch",
     "clean:dist": "rm -rf dist",
-    "build": "npm run clean:dist && webpack -p",
-    "start:server": "nodemon server/server.bable.js"
+    "start:server": "nodemon server/server.bable.js",
+    "build:client": "npm run clean:dist && webpack -p",
+    "build:all": "concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:server": "webpack --config webpack.server.config.js"
   },
   "dependencies": {
     "@axa/web-toolkit": "^2.0.0-alpha.1",

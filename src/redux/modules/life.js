@@ -5,16 +5,10 @@ import axios from 'axios';
 /*
 ** please see example https://github.com/erikras/ducks-modular-redux
 */
-
-// const LOAD   = 'myaxa/life/LOAD';
-// const CREATE = 'myaxa/life/CREATE';
-// const UPDATE = 'myaxa/life/UPDATE';
-// const REMOVE = 'myaxa/life/REMOVE';
-
 const FETCH_USERS = 'myaxa/life/fetchUsers';
-const FETCHING_USERS = 'myaxa/life/fetchingUsers';
-const RECEIVED_USERS = 'myaxa/life/receivedUsers';
-const ERROR_FETCHING_USERS = 'myaxa/life/errorUsers';
+const FETCH_USERS_PENDING = 'myaxa/life/fetchingUsers';
+const FETCH_USERS_SUCCESS = 'myaxa/life/receivedUsers';
+const FETCH_USERS_FAILED = 'myaxa/life/errorUsers';
 
 const initialState = {
   text: 'foo',
@@ -30,12 +24,11 @@ export default function reducer(state = initialState, action = {}) {
     case FETCH_USERS:
       return state;
       return {...state, ...action.payload};
-    case FETCHING_USERS:
+    case FETCH_USERS_PENDING:
       return {...state, isLoading: true};
-    case RECEIVED_USERS:
+    case FETCH_USERS_SUCCESS:
     return {...state, users: [...action.payload], isLoading: false};
-
-    case ERROR_FETCHING_USERS:
+    case FETCH_USERS_FAILED:
     return {...state, isLoading: false}
 
     default: return state;
@@ -46,25 +39,25 @@ export default function reducer(state = initialState, action = {}) {
 export function fetchUsers() {
 
   return function(dispatch) {
-    dispatch(fetchingUsers());
+    dispatch(fetchUsersPending());
     return axios.get('https://api.github.com/users?since=135')
     .then((response) => {
-      dispatch(receivedUsers(response.data));
+      dispatch(fetchUsersSuccess(response.data));
     })
     .catch((error) => {
-      dispatch(errorFetchingUsers(error));
+      dispatch(fetchUsersFailed(error));
     });
   }
 }
 
-function fetchingUsers() {
-  return { type: FETCHING_USERS };
+function fetchUsersPending() {
+  return { type: FETCH_USERS_PENDING };
 }
 
-function receivedUsers(users) {
-  return { type: RECEIVED_USERS, payload: users };
+function fetchUsersSuccess(users) {
+  return { type: FETCH_USERS_SUCCESS, payload: users };
 }
 
-function errorFetchingUsers(error) {
-  return { type: ERROR_FETCHING_USERS, payload: error };
+function fetchUsersFailed(error) {
+  return { type: FETCH_USERS_FAILED, payload: error };
 }

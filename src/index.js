@@ -12,7 +12,6 @@ import createStore from './redux/createStore';
 import RootContainer from './containers/RootContainer';
 
 require('@axa/web-toolkit/dist/bundles/all.css');
-//https://alejandronapoles.com/2016/05/10/react-and-css-modules/
 
 const initialState = window.___INITIAL_STATE__;
 const store = createStore(initialState);
