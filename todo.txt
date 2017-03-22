@@ -1,17 +1,18 @@
 
 - webpack dev middleware
+- webpack-hot-middleware
+- react router 4
+- react redux router
 - reactIntl
-- axatoolkit
-- redux logger middleware
+- axatoolkit - DONE
+- redux logger middleware 
 - redux dev tools - DONE
   - configure for node_env  https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md
 - postCSS
-- react router redux
-- static folder
 - immutable
 - tests
 - https://github.com/reactjs/reselect
 - https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 - react css modules
 - tag commander
-- add filename hash
+- add hash
